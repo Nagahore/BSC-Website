@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BSC Rwanda Hero Section</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- FontAwesome CDN -->
+</head>
+
+<body class="bg-white drop-shadow w-[1440px] h-[108.23px]">
+    <div class="mx-0">
+        <!-- Navbar -->
+        <header class="flex justify-between items-center p-6 bg-white shadow-md sticky top-0 z-10">
+            <!-- Logo -->
+            <div class="text-red-500 text-2xl font-bold flex items-center">
+                <img src="Images/bsclogo.png" alt="BSC Logo" class="h-10 w-auto"> <!-- Adjusted height for consistency -->
+            </div>
+
+            <!-- Navigation Links -->
+            <!-- Navigation Links -->
+            <nav class="flex space-x-4 items-center font-semibold" style="font-size: 12px;">
+                <a href="index.html" class="text-gray-700 hover:text-red-500">Home</a>
+            
+                <!-- Solutions Dropdown -->
+                <div class="relative group">
+                    <a href="#" class="text-black hover:text-red-500 relative flex items-center">
+                        Solutions
+                        <i class="fas fa-chevron-down ml-1"></i> <!-- Dropdown icon -->
+                    </a>
+                    <!-- Dropdown Menu -->
+                    <div class="absolute hidden bg-white border border-gray-200 rounded-md shadow-lg mt-1 group-hover:block">
+                        <a href="ConnectivitySolutions.html" class="block px-4 py-2 text-gray-700 hover:text-red-500 text-sm">Connectivity Solutions</a>
+                        <a href="ISP.html" class="block px-4 py-2 text-gray-700 hover:text-red-500 text-sm">ISP Products</a>
+                        <a href="BusinessSolutions.html" class="block px-4 py-2 text-gray-700 hover:text-red-500 text-sm">Business Solutions</a>
+                    </div>
+                </div>
+            
+                <!-- Opportunities Dropdown -->
+                <div class="relative group">
+                    <a href="#" class="text-black hover:text-red-500 relative flex items-center">
+                        Opportunities
+                        <i class="fas fa-chevron-down ml-1"></i>
+                    </a>
+                    <div class="absolute hidden bg-white border border-gray-200 rounded-md shadow-lg mt-1 group-hover:block">
+                        <a href="CareerOpportunity.html" class="block px-4 py-2 text-gray-700 hover:text-red-500 text-sm">Career</a>
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:text-red-500 text-sm">Tenders</a>
+                    </div>
+                </div>
+            
+                <a href="AboutUs.html" class="text-black hover:text-red-500">About Us</a>
+                <a href="NewsBlog.html" class="text-black hover:text-red-500">News/Blog</a>
+                <a href="SecureCloud.html" class="text-black hover:text-red-500">Secure Cloud</a>
+                <a href="#" class="text-black hover:text-red-500">FAQ</a>
+            </nav>
+            
+
+            <!-- Call to Action Button -->
+            <a href="#" class="bg-red-500 text-white px-4 py-2 rounded-md font-semibold text-xs">Get In Touch</a>
+        </header>
+    </div>
+
+    <script>
+        // Show and hide dropdown on hover
+        const dropdown = document.querySelector('.relative');
+        const menu = dropdown.querySelector('div');
+
+        dropdown.addEventListener('mouseenter', () => {
+            menu.classList.remove('hidden');
+        });
+
+        dropdown.addEventListener('mouseleave', () => {
+            menu.classList.add('hidden');
+        });
+    </script>
+
+
+
+
+<!-- Hero Section -->
+<section class="mt-20 bg-red-800 flex items-center justify-start text-left py-40 -mt-20 relative">
+    <div class="ml-6 w-1/2">
+        <h1 class="text-white font-bold" style="font-size: 40px;">
+            About Us
+        </h1>    
+        <p class="mt-4 text-white font-regular" style="font-size: 15px;">We are a tech company established in 2008, providing world-class broadband connectivity</p>
+        <p class="mt-0 text-white font-regular" style="font-size: 15px;">and solutions to empower citizens, communities, governments, and businesses in Rwanda and</p>
+        <p class="mt-0 text-white font-regular" style="font-size: 15px;">the region.</p>
+    </div>
+
+    
+    <div class="bg-white w-1/3 h-64 rounded-lg shadow-lg absolute -bottom-32 left-3/4 transform -translate-x-1/2 flex items-center justify-center">
+        <img src="Images/career1.png" alt="About Us Image" class="h-full w-full object-cover rounded-lg">
+    </div> 
+</section>
+
+
+
+<!-- Recruitment Process -->
+<section class="mt-60">
+    <div class="flex justify-end mr-40">
+        <div class="mr-20"> 
+            <h2 class="ml-15 mt-20 text-black font-bold text-xl">Our recruitment process</h2> 
+            <p class="mt-4 text-black font-regular text-xs" style="font-size: 13px;">BSC is an equal-opportunity employer seeking highly motivated and innovative talent.</p>
+            <p class="mt-1 text-black font-regular text-xs" style="font-size: 13px;">Our recruitment process involves virtual and physical interviews, tests, and background checks.</p>
+            <p class="mt-1 text-black font-regular text-xs" style="font-size: 13px;">No money or favours are sought from applicants during the application process.</p>
+        
+        </div>
+        <img src="Images/career2.png" alt="Another Image" class="h-64 w-1/3 object-cover rounded-lg -mr-4">
+    </div>
+</section>
+
+<section class="mt-20">
+    <h2 class="font-bold text-2xl text-center">Testimonials</h2> 
+    <div class="flex flex-wrap justify-center mt-20"> 
+        <!-- Card 1 -->
+        <div class="bg-white w-1/4 h-80 p-4 flex flex-col items-center" style="box-shadow: 0 4px 15px #ffc1c180; margin: 0; position: relative; top: -30px; padding-top: 30px; padding-bottom: 10px;"> 
+            <img src="Images/TImage1.png" alt="Fiber Optic Deployment" class="h-24 w-24 rounded-full mb-4 object-cover" style="margin-top: -40px;">
+            <h3 class="mt-0 text-black font-bold text-lg" style="font-size: 16px;">David Hakizimana</h3>
+            <h2 class="mt-1 text-black font-regular text-sm" style="font-size: 14px;">Project Manager</h2>
+            <p class="mt-4 text-black text-xs font-light text-center" style="font-size: 12px;">Working at BSC Rwanda has been a transformative experience, blending innovation with a supportive team environment. Every day brings new challenges that inspire creativity and innovation.</p>
+        </div>
+        
+        <!-- Card 2 (Longer) -->
+        <div class="bg-white w-1/4 h-80 p-4 flex flex-col items-center" style="box-shadow: 0 4px 15px #ffc1c180; margin: 0; position: relative; top: -50px; padding-top: 30px; padding-bottom: 50px;"> 
+            <img src="Images/TImage2.png" alt="Fiber Optic Deployment" class="h-24 w-24 rounded-full mb-4 object-cover" style="margin-top: -40px;">
+            <h3 class="mt-0 text-black font-bold text-lg" style="font-size: 16px;">Sarah Iradukunda</h3>
+            <h2 class="mt-1 text-black font-regular text-sm" style="font-size: 14px;">Project Manager</h2>
+            <p class="mt-4 text-black text-xs font-light text-center" style="font-size: 12px;">Working at BSC Rwanda has been a transformative experience, blending innovation with a supportive team environment. Every day brings new challenges that inspire creativity and innovation.</p>
+        </div>
+        
+        <!-- Card 3 -->
+        <div class="bg-white w-1/4 h-80 p-4 flex flex-col items-center" style="box-shadow: 0 4px 15px #ffc1c180; margin: 0; position: relative; top: -30px; padding-top: 30px; padding-bottom: 10px;"> 
+            <img src="Images/TImage3.png" alt="Fiber Optic Deployment" class="h-24 w-24 rounded-full mb-4 object-cover" style="margin-top: -40px;">
+            <h3 class="mt-0 text-black font-bold text-lg" style="font-size: 16px;">David Hakizimana</h3>
+            <h2 class="mt-1 text-black font-regular text-sm" style="font-size: 14px;">Project Manager</h2>
+            <p class="mt-4 text-black text-xs font-light text-center" style="font-size: 12px;">Working at BSC Rwanda has been a transformative experience, blending innovation with a supportive team environment. Every day brings new challenges that inspire creativity and innovation.</p>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Footer Section -->
+<footer class="mt-20 text-white py-8" style="background-color: #FFEEEE;">
+    <div class="container mx-auto flex justify-between items-center">
+       
+        <div class="w-1/3">
+            <img src="Images/bsclogo.png" alt="BSC Logo" class="w-28 mb-10">
+            <p class="text-black text-sm">Welcome to BSC. We’re excited to partner with you for your success.</p>
+            <a href="#" class="bg-red-500 text-white px-4 py-1 rounded-md font-semibold" style="font-size: 11px;">Tall Free 4141</a>
+        </div>
+        
+        <div class="w-1/3 text-center">
+            <p class="text-black text-sm">Kigali, Rwanda<br>Building 5 Avenue, Gasabo</p>
+            <p class="text-black text-sm">P.O Box 1234, Kigali, Rwanda</p>
+        </div>
+     
+        <div class="w-1/3 text-right">
+            <p class="text-black  text-sm">Opportunities | Secure Cloud</p>
+            <div class="mt-4 space-x-4">
+                <a href="#"><img src="Images/facebook_icon.png" alt="Facebook" class="w-6 inline-block"></a>
+                <a href="#"><img src="Images/twitter_icon.png" alt="Twitter" class="w-6 inline-block"></a>
+                <a href="#"><img src="Images/linkedin_icon.png" alt="LinkedIn" class="w-6 inline-block"></a>
+                <a href="#"><img src="Images/instagram_icon.png" alt="Instagram" class="w-6 inline-block"></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

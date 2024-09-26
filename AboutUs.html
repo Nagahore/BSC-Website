@@ -6,26 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BSC Rwanda Hero Section</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- FontAwesome CDN -->
 </head>
 
 <body class="bg-white drop-shadow w-[1440px] h-[108.23px]">
-    <div class="mx-0"> <!-- Changed to mx-0 to remove horizontal margins -->
-
+    <div class="mx-0">
         <!-- Navbar -->
         <header class="flex justify-between items-center p-6 bg-white shadow-md sticky top-0 z-10">
-            <div class="text-red-500 text-2xl font-bold">
-                <img src="Images/bsclogo.png" alt="BSC Logo" class="w-73 h-41">
+            <!-- Logo -->
+            <div class="text-red-500 text-2xl font-bold flex items-center">
+                <img src="Images/bsclogo.png" alt="BSC Logo" class="h-10 w-auto"> <!-- Adjusted height for consistency -->
             </div>
-            <nav class="space-x-4 font-semibold" style="font-size: 12px;">
-                <a href="#" class="text-gray-700 hover:text-red-500">Solutions</a>
-                <a href="#" class="text-gray-700 hover:text-red-500">Opportunities</a>
-                <a href="#" class="text-gray-700 hover:text-red-500">About Us</a>
-                <a href="#" class="text-gray-700 hover:text-red-500">News/Blog</a>
-                <a href="#" class="text-gray-700 hover:text-red-500">Secure Cloud</a>
-                <a href="#" class="text-gray-700 hover:text-red-500">FAQ</a>
+
+            <!-- Navigation Links -->
+            <!-- Navigation Links -->
+            <nav class="flex space-x-4 items-center font-semibold" style="font-size: 12px;">
+                <a href="index.html" class="text-gray-700 hover:text-red-500">Home</a>
+            
+                <!-- Solutions Dropdown -->
+                <div class="relative group">
+                    <a href="#" class="text-black hover:text-red-500 relative flex items-center">
+                        Solutions
+                        <i class="fas fa-chevron-down ml-1"></i> <!-- Dropdown icon -->
+                    </a>
+                    <!-- Dropdown Menu -->
+                    <div class="absolute hidden bg-white border border-gray-200 rounded-md shadow-lg mt-1 group-hover:block">
+                        <a href="ConnectivitySolutions.html" class="block px-4 py-2 text-gray-700 hover:text-red-500 text-sm">Connectivity Solutions</a>
+                        <a href="ISP.html" class="block px-4 py-2 text-gray-700 hover:text-red-500 text-sm">ISP Products</a>
+                        <a href="BusinessSolutions.html" class="block px-4 py-2 text-gray-700 hover:text-red-500 text-sm">Business Solutions</a>
+                    </div>
+                </div>
+            
+                <!-- Opportunities Dropdown -->
+                <div class="relative group">
+                    <a href="#" class="text-black hover:text-red-500 relative flex items-center">
+                        Opportunities
+                        <i class="fas fa-chevron-down ml-1"></i>
+                    </a>
+                    <div class="absolute hidden bg-white border border-gray-200 rounded-md shadow-lg mt-1 group-hover:block">
+                        <a href="CareerOpportunity.html" class="block px-4 py-2 text-gray-700 hover:text-red-500 text-sm">Career</a>
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:text-red-500 text-sm">Tenders</a>
+                    </div>
+                </div>
+            
+                <a href="AboutUs.html" class="text-black hover:text-red-500">About Us</a>
+                <a href="NewsBlog.html" class="text-black hover:text-red-500">News/Blog</a>
+                <a href="SecureCloud.html" class="text-black hover:text-red-500">Secure Cloud</a>
+                <a href="#" class="text-black hover:text-red-500">FAQ</a>
             </nav>
-            <a href="#" class="bg-red-500 text-white px-4 py-1 rounded-md font-semibold" style="font-size: 11px;">Get In Touch</a>
+            
+
+            <!-- Call to Action Button -->
+            <a href="#" class="bg-red-500 text-white px-4 py-2 rounded-md font-semibold text-xs">Get In Touch</a>
         </header>
+    </div>
+
+    <script>
+        // Show and hide dropdown on hover
+        const dropdown = document.querySelector('.relative');
+        const menu = dropdown.querySelector('div');
+
+        dropdown.addEventListener('mouseenter', () => {
+            menu.classList.remove('hidden');
+        });
+
+        dropdown.addEventListener('mouseleave', () => {
+            menu.classList.add('hidden');
+        });
+    </script>
+
+
 
 
         
@@ -117,6 +167,7 @@
             <p class="mt-4 text-black text-xs font-light" style="font-size: 15px;">Deployed Over 8,000 of Fiber optice covering all 30 districts, 2,300km aerial network BSC radio infrastructure </p>
         </div>
     </div>
+    </section>
 
 
 <!--Google Map-->
