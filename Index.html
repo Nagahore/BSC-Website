@@ -9,20 +9,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- FontAwesome CDN -->
 </head>
 
-<body class="bg-white drop-shadow w-[1440px] h-[108.23px]">
+<body class="bg-white w-[1440px] h-[108.23px]">
     <div class="mx-0">
         <!-- Navbar -->
-        <header class="flex justify-between items-center p-6 bg-white shadow-md sticky top-0 z-10">
+        <header class="flex justify-between items-center p-6 bg-white sticky top-0 z-10"> <!-- Removed shadow-md class -->
             <!-- Logo -->
-            <div class="text-red-500 text-2xl font-bold flex items-center">
-                <img src="Images/bsclogo.png" alt="BSC Logo" class="h-10 w-auto"> <!-- Adjusted height for consistency -->
+            <div class="text-red-500 text-2xl font-bold flex items-center ml-20">
+                <img src="Images/bsclogo.png" alt="BSC Logo" class="h-32.59 w-69.87"> <!-- Adjusted height for consistency -->
             </div>
 
             <!-- Navigation Links -->
-            <!-- Navigation Links -->
-            <nav class="flex space-x-4 items-center font-semibold" style="font-size: 12px;">
+            <nav class="flex space-x-4 items-center font-regular text-black " style="font-size: 13px;">
                 <a href="index.html" class="text-gray-700 hover:text-red-500">Home</a>
-            
+
                 <!-- Solutions Dropdown -->
                 <div class="relative group">
                     <a href="#" class="text-black hover:text-red-500 relative flex items-center">
@@ -30,50 +29,67 @@
                         <i class="fas fa-chevron-down ml-1"></i> <!-- Dropdown icon -->
                     </a>
                     <!-- Dropdown Menu -->
-                    <div class="absolute hidden bg-white border border-gray-200 rounded-md shadow-lg mt-1 group-hover:block">
+                    <div class="absolute hidden bg-white border border-gray-200 rounded-md mt-1 group-hover:block">
                         <a href="ConnectivitySolutions.html" class="block px-4 py-2 text-gray-700 hover:text-red-500 text-sm">Connectivity Solutions</a>
                         <a href="ISP.html" class="block px-4 py-2 text-gray-700 hover:text-red-500 text-sm">ISP Products</a>
                         <a href="BusinessSolutions.html" class="block px-4 py-2 text-gray-700 hover:text-red-500 text-sm">Business Solutions</a>
                     </div>
                 </div>
-            
+
                 <!-- Opportunities Dropdown -->
                 <div class="relative group">
                     <a href="#" class="text-black hover:text-red-500 relative flex items-center">
                         Opportunities
                         <i class="fas fa-chevron-down ml-1"></i>
                     </a>
-                    <div class="absolute hidden bg-white border border-gray-200 rounded-md shadow-lg mt-1 group-hover:block">
+                    <div class="absolute hidden bg-white border border-gray-200 rounded-md mt-1 group-hover:block">
                         <a href="CareerOpportunity.html" class="block px-4 py-2 text-gray-700 hover:text-red-500 text-sm">Career</a>
                         <a href="#" class="block px-4 py-2 text-gray-700 hover:text-red-500 text-sm">Tenders</a>
                     </div>
                 </div>
-            
+
                 <a href="AboutUs.html" class="text-black hover:text-red-500">About Us</a>
                 <a href="NewsBlog.html" class="text-black hover:text-red-500">News/Blog</a>
                 <a href="SecureCloud.html" class="text-black hover:text-red-500">Secure Cloud</a>
-                <a href="#" class="text-black hover:text-red-500">FAQ</a>
+                <a href="FAQ.html" class="text-black hover:text-red-500">FAQ</a>
             </nav>
-            
 
-            <!-- Call to Action Button -->
-            <a href="#" class="bg-red-500 text-white px-4 py-2 rounded-md font-semibold text-xs">Get In Touch</a>
+            <!-- Contact Us and Search Buttons -->
+            <div class="flex space-x-4 items-center mr-20">
+                <!-- Contact Us Button -->
+                <a href="Contact.html" class="bg-red-700 text-white px-6 py-1 rounded-md font-light text-xs flex items-center justify-center" style="box-shadow: 0 4px 8px rgba(237, 183, 183, 0.5);">
+                    <span class="font-bold text-white" style="font-size: 11px">Contact Us</span>
+                </a>
+
+                <!-- Search Button -->
+                <a href="#" class="flex items-center justify-center bg-white border border-red-600 text-black px-6 py-1 rounded-md font-light text-xs relative w-full lg:w-auto" style="box-shadow: 0 4px 8px rgba(237, 183, 183, 0.5);">
+                    <span class="font-light text-black" style="font-size: 11px">Search</span>
+                    <i class="text-black font-light fa-solid fa-magnifying-glass ml-4"></i> <!-- Icon after the text -->
+                </a>
+            </div>
         </header>
     </div>
 
     <script>
         // Show and hide dropdown on hover
-        const dropdown = document.querySelector('.relative');
-        const menu = dropdown.querySelector('div');
+        const dropdown = document.querySelectorAll('.relative');
 
-        dropdown.addEventListener('mouseenter', () => {
-            menu.classList.remove('hidden');
-        });
+        dropdown.forEach(menuItem => {
+            const menu = menuItem.querySelector('div');
 
-        dropdown.addEventListener('mouseleave', () => {
-            menu.classList.add('hidden');
+            menuItem.addEventListener('mouseenter', () => {
+                menu.classList.remove('hidden');
+            });
+
+            menuItem.addEventListener('mouseleave', () => {
+                menu.classList.add('hidden');
+            });
         });
     </script>
+</body>
+
+</html>
+
 
 
 
@@ -82,7 +98,7 @@
 
         <!-- Hero Section -->
         <section class="hero-section flex items-center justify-start text-left py-40 bg-white -mt-20">
-            <div class="ml-6"> 
+            <div class="ml-20 mt-20"> 
                 <h1 class="text-black font-bold" style="font-size: 40px;">
                     Discover <span class="text-red-500">Impactful</span>
                 </h1>
@@ -91,110 +107,120 @@
                 </h1>
                 
                 <p class="mt-4 text-black font-regular" style="font-size: 15px;">At BSC Rwanda, we are committed to delivering fast, reliable, and secure internet</p>
-                <p class="mt-0 text-black font-regular" style="font-size: 15px;">services to homes.</p>
+                <p class="mt-1 text-black font-regular" style="font-size: 15px;">services to homes.</p>
 
-                <a href="#" class="mt-20 bg-red-500 text-white px-4 py-1 rounded-md font-bold" style="font-size: 10px;">Purchase Now</a>
+                <a href="Contact.html" class="mt-8 bg-red-600 text-white px-5 py-1 rounded-md font-bold" style="font-size: 10px;">Get In Touch</a>
             </div> 
         </section>
 
 
        <!-- Logos Section -->
-       <div class="bg-white w-full h-[114px] shadow-md blur-md mt-12">
-        <section class="flex justify-center items-center w-full h-full px-10 space-x-[120px]"> 
-            <img src="Images/logo1.png" alt="Logo 1" class="w-[115px] h-[30px]">
-            <img src="Images/logo2.png" alt="Logo 2" class="w-[115px] h-[30px]">
-            <img src="Images/logo 3.png" alt="Logo 3" class="w-[115px] h-[30px]">
-            <img src="Images/logo4.png" alt="Logo 4" class="w-[115px] h-[30px]">
-            <img src="Images/logo5.png" alt="Logo 5" class="w-[115px] h-[30px]">
-            <img src="Images/logo6.png" alt="Logo 6" class="w-[115px] h-[30px]">
-            <img src="Images/logo7.png" alt="Logo 7" class="w-[115px] h-[30px]">
-        </section>
-    </div>
+       
+       <section class=" flex justify-center items-center   px-10 space-x-20 shadow-md mt-2"> 
+        <img src="Images/logo1.png" alt="Logo 1" class="w-59 h-67"> <!-- 40px -->
+        <img src="Images/logo2.png" alt="Logo 2" class="w-115 h-30"> 
+        <img src="Images/logo 3.png" alt="Logo 3" class="w-147 h-31"> 
+        <img src="Images/logo4.png" alt="Logo 4" class="w-115 h-30"> 
+        <img src="Images/logo5.png" alt="Logo 5" class="w-115 h-30"> 
+        <img src="Images/logo6.png" alt="Logo 6" class="w-115 h-30"> 
+        <img src="Images/logo7.png" alt="Logo 7" class="w-59 h-91"> 
+    </section>
+    
+    
+    
+    
     
 
- <!--Our Services-->
-<div class="w-full min-h-screen" style="background-color: hsl(0, 100%, 98%);">
- 
+ <!-- Our Services -->
+<section class="w-full mt-10 bg-white py-8"> <!-- Removed duplicate mt-2 -->
     <div class="text-center py-8">
-        <h2 class="text-3xl font-bold text-black">Our Services</h2>
+        <h2 class="text-3xl font-semibold text-black mt-2">Our Services</h2>
     </div>
 
     <div class="flex justify-center items-center py-8">
         <div class="flex justify-center items-center w-full max-w-screen-lg">
-            <div class="flex justify-around w-full space-x-6"> 
-              
-                <div class="bg-white shadow-lg rounded-lg w-[289px] h-[343px] flex flex-col items-start p-6 overflow-hidden"> 
-                    <img src="Images/4G Internet.png" alt="4G Internet Icon" class="w-20 mb-4"> 
+            <div class="flex justify-around w-full space-x-6">
+                <!-- 4G Internet Service Card -->
+                <div class="bg-white shadow-lg rounded-lg w-[289px] h-[343px] flex flex-col items-start p-6 overflow-hidden">
+                    <img src="Images/4G Internet.png" alt="4G Internet Icon" class="w-20 mb-4">
                     <h3 class="text-black font-bold mb-2" style="font-size: 20px;">4G Internet</h3>
-                    <p class="text-black" style="font-size: 13px;">We offer premier 4G internet service to ensure our customers receive the highest quality connectivity</p>
+                    <p class="text-black" style="font-size: 13px;">We provide premier 4G internet service to ensure top-quality connectivity for our customers.</p>
                     <div class="flex justify-end w-full mt-auto">
                         <a href="#" class="bg-red-500 text-white px-4 py-1 rounded-md font-bold" style="font-size: 10px;">Purchase Now</a>
                     </div>
                 </div>
 
-          
+                <!-- Cloud Services Card -->
                 <div class="bg-white shadow-lg rounded-lg w-[289px] h-[343px] flex flex-col items-start p-6 overflow-hidden">
                     <img src="Images/Cloud Service.png" alt="Cloud Services Icon" class="w-20 mb-4">
                     <h3 class="text-black font-bold mb-2" style="font-size: 20px;">Cloud Services</h3>
-                    <p class="text-black" style="font-size: 13px;">We offer premier 4G internet service to ensure our customers receive the highest quality connectivity</p>
+                    <p class="text-black" style="font-size: 13px;">Experience seamless cloud solutions that enhance your business operations and data management.</p>
                     <div class="flex justify-end w-full mt-auto">
-                        <a href="#" class="bg-red-500 text-white px-4 py-1 rounded-md font-bold" style="font-size: 10px;">Purchase Now</a>
+                        <a href="#" class="bg-red-500 text-white px-4 py-1 rounded-md font-bold" style="font-size: 10px;">Get Started</a>
                     </div>
                 </div>
 
-              
+                <!-- Network Infrastructure Card -->
                 <div class="bg-white shadow-lg rounded-lg w-[289px] h-[343px] flex flex-col items-start p-6 overflow-hidden">
                     <img src="Images/Network.png" alt="Network Infrastructure Icon" class="w-20 mb-4">
                     <h3 class="text-black font-bold mb-2" style="font-size: 20px;">Network Infrastructure</h3>
-                    <p class="text-black" style="font-size: 13px;">We offer premier 4G internet service to ensure our customers receive the highest quality connectivity</p>
+                    <p class="text-black" style="font-size: 13px;">Building robust network infrastructures tailored to meet your connectivity needs.</p>
                     <div class="flex justify-end w-full mt-auto">
-                        <a href="#" class="bg-red-500 text-white px-4 py-1 rounded-md font-bold"style="font-size: 10px;">Contact 411</a>
+                        <a href="#" class="bg-red-500 text-white px-4 py-1 rounded-md font-bold" style="font-size: 10px;">Contact Us</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 
-<!-- About Us Section (No background) -->
-<div class="container min-h-screen w-full flex justify-center items-center py-16 bg-white">
-    <div class="max-w-6xl mx-auto flex flex-row items-center">
-   
-        <div class="w-1/2 pr-8">
-            <img src="Images/Aboutus.png" alt="About Us" class="rounded-lg shadow-lg w-full">
+<!-- About Us Section -->
+<section class="py-16 bg-white mt-6"> <!-- Adjusted margin-top to mt-6 -->
+    <div class="text-center">
+        <h2 class="font-semibold text-3xl mt-2">About Us</h2>
+    </div>
+    <div class="container min-h-screen w-full flex justify-center items-center">
+        <div class="max-w-6xl mx-auto flex flex-row items-center mt-2">
+            <div class="w-1/2 pr-8 flex flex-col items-center ml-20 relative">
+                <img src="Images/herro3.png" alt="Photo 3" class="absolute w-58 h-65 top-16 ml-80 mt-4 shadow-lg" style="box-shadow: 0px 4px 15px rgba(228, 180, 180, 0.5);">
+                <div class="flex items-center space-x-2 mt-0">
+                    <img src="Images/hero1.png" alt="Photo 1" class="w-58 h-65 shadow-lg" style="box-shadow: 0px 4px 15px rgba(228, 180, 180, 0.5);">
+                    <img src="Images/hero2.png" alt="Photo 2" class="w-58 h-65 shadow-lg" style="box-shadow: 0px 4px 15px rgba(228, 180, 180, 0.5);">
+                </div>
+            </div>
         </div>
-   
-        <div class="w-1/2">
-            <h2 class="text-2xl font-bold text-black ">About Us</h2>
+
+        <div class="w-1/2 mt-20">
             <div class="grid grid-cols-1 gap-10">
-             
                 <div class="flex flex-col">
-                    <h3 class="text-lg font-semibold text-black ">Full Service</h3>
-                    <p class="text-sm text-black">Comprehensive solutions tailored to your needs.</p>
+                    <h3 class="font-regular text-black ml-20" style="font-size:24px">Full Service</h3>
+                    <p class="text-light ml-20" style="font-size: 14px">Comprehensive solutions tailored to your needs.</p>
                 </div>
                 <div class="flex flex-col">
-                    <h3 class="text-lg font-semibold text-black mb-1">Best Pricing Plan</h3>
-                    <p class="text-sm font-regular text-black">Competitive pricing without compromising quality.</p>
+                    <h3 class="font-regular text-black mb-1 ml-20" style="font-size:24px">Best Pricing Plan</h3>
+                    <p class="font-light text-black ml-20" style="font-size: 14px">Competitive pricing without compromising quality.</p>
                 </div>
-                <div class="flex flex-col">
-                    <h3 class="text-lg font-semibold text-black mb-1">Support 24/7</h3>
-                    <p class="text-sm font-regular text-black">Always here to assist you whenever you need.</p>
+                <div class="flex flex-col ml-20">
+                    <h3 class="font-regular text-black mb-1" style="font-size: 24px">Support 24/7</h3>
+                    <p class="font-light text-black" style="font-size: 14px">Always here to assist you whenever you need.</p>
                 </div>
-                <div class="flex flex-col">
-                    <h3 class="text-lg font-semibold text-black  mb-1">Experience & Innovation</h3>
-                    <p class=" font-regular text-black">Years of expertise with a focus on cutting-edge solutions.</p>
+                <div class="flex flex-col ml-20">
+                    <h3 class="font-regular text-black mb-1" style="font-size: 24px">Experience & Innovation</h3>
+                    <p class="font-light text-black" style="font-size: 14px">Years of expertise with a focus on cutting-edge solutions.</p>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
+
+
 
 
 <!-- Our Solutions Section -->
-<div class="bg-red-800 py-10 w-full">
+<div class="bg-red-800 py-10 w-full mt-10">
     <div class="container mx-auto flex items-center mb-4">
         <div class="mr-6">
-            <h2 class="text-white text-xl font-bold">OUR SOLUTIONS</h2>
+            <h2 class="text-white text-xl font-semibold">OUR SOLUTIONS</h2>
             <p class="text-white text-xs">Take Your Business To The Next Level</p>
         </div>
 
@@ -230,8 +256,8 @@
 
 
 <!-- What We Believe Section -->
-<div class="py-16 bg-white">
-    <h2 class="text-center text-3xl font-bold mb-8">What We Believe</h2>
+<div class="py-16 bg-white mt-2">
+    <h2 class="text-center text-3xl font-semibold mb-8 mt-4">What We Believe</h2>
     <div class="flex justify-center space-x-8">
     
         <div class="bg-white rounded-lg shadow-md w-64 p-6 text-center">
@@ -256,93 +282,138 @@
 </div>
 
 <!-- Blog & News Section -->
-<div class="py-16 bg-white">
-    <h2 class="text-center text-3xl font-bold mb-8">Blog & News</h2>
-    <div class="flex justify-center space-x-8">
-        
-        <div class="bg-white rounded-lg shadow-md w-64 p-6">
-            <img src="Images/News1.png" alt="Event Image" class="w-full h-40 object-cover mb-4">
-            <h3 class="text-black text-lg font-semibold mb-2">BSC's Unveiling Event</h3>
-            <p class="text-black text-sm mb-6">A Triumph in Security Innovation. November 20th, 2023 marked a memorable occasion for BSC...</p>
-            <div class="text-right">
-                <a href="#" class="inline-block text-red-500 font-bold">Read More</a>
+<section id="News&Blog" class="bg-white  py-16 mt-2">
+    <h2 class="text-center text-3xl font-semibold mb-8">News&Blog</h2>
+    <div class="container mx-auto mt-10 text-center">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div>
+                <img src="Images/blog2.png" alt="CEO" class="w-full h-48 object-cover rounded-lg">
+                <div class="bg-white rounded-lg shadow-lg p-4 mt-4">
+                    <h3 class="mb-4 text-xm font-bold">BSC's Unveiling Event</h3>
+                    <p class="mb-2 font-semibold text-black text-xs">A Triumph in Security Innovation!</p>
+                    <p class="mb-2 text-black text-xs">November 9th, 2023, marked a momentous occasion for BSC – an event that celebrated not just achievem...</p>
+                    <div class="flex justify-end w-full mt-auto">
+                        <a href="#" class=" bg-red-800 text-white px-4 py-1 rounded-md font-bold" style="font-size: 10px;">Read More</a>
+                    </div>
+                </div>
             </div>
-        </div>
-        
-        <div class="bg-white rounded-lg shadow-md w-64 p-6">
-            <img src="Images/News2.png" alt="Cybersecurity Event" class="w-full h-40 object-cover mb-4">
-            <h3 class="text-black text-lg font-semibold mb-2">The Vital Role of Cybersecurity</h3>
-            <p class="text-black text-sm mb-6">In today's digitally-driven world, education in cybersecurity is essential...</p>
-            <div class="text-right">
-                <a href="#" class="inline-block text-red-500 font-bold">Read More</a>
+            <!-- Card 2 -->
+            <div>
+                <img src="Images/blog3.png" alt="Corporate Officer" class="w-full h-48 object-cover rounded-lg">
+                <div class="bg-white rounded-lg shadow-lg p-4 mt-4">
+                    <h3 class="mb-4 text-xm font-bold">The Vital Role of Cybersecurity</h3>
+                    <p class="mb-2 font-semibold text-xs">in Protecting Students Online</p>
+                    <p class="mb-2 text-black text-xs">In today's digitally driven world, education isn't confined within the walls of a classroom. The int...</p>
+                    <div class="flex justify-end w-full mt-auto">
+                        <a href="#" class="bg-red-800 text-white px-4 py-1 rounded-md font-bold" style="font-size: 10px;">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div>
+                <img src="Images/blog4.png" alt="Technical Officer" class="w-full h-48 object-cover rounded-lg">
+                <div class="bg-white rounded-lg shadow-lg p-4 mt-4">
+                    <h3 class="mb-4 text-xm font-bold">Revolutionizing Education</h3>
+                    <p class="mb-2 font-semibold text-xs">BSC's Role in Rwanda's Smart Education Network</p>
+                    <p class="mb-2 text-black text-xs">November 9th, 2023, marked a momentous occasion for BSC – an event that celebrated not just achievem...</p>
+                    <div class="flex justify-end w-full mt-auto">
+                        <a href="#" class="bg-red-800 text-white px-4 py-1 rounded-md font-bold" style="font-size: 10px;">Read More</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
+</section>
 
 
 <!-- Hear from Our Satisfied Customer Section -->
-<div class="py-16 bg-white">
-    <h2 class="text-center text-3xl font-bold mb-8">Hear from Our Satisfied Customer</h2>
-    <p class="text-center text-black mb-12">We strive to provide exceptional service and unwavering support. But don’t just take our word for it—here’s what our customers have to say.</p>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mx-auto max-w-6xl">
-     
-        <div class="bg-white shadow-md rounded-md p-6">
-            <img src="Images/Testimonial1.png" alt="Customer" class="w-12 h-12 rounded-full mb-4">
-            <p class="text-black ">"Working with BSC has been a remarkable experience. Their solutions are top-notch."</p>
-            <p class="text-black text-sm mt-2 font-semibold">- Sarah M. | Business Owner</p>
-        </div>
-        
-        <div class="bg-white shadow-md rounded-md p-6">
-            <img src="Images/Testimonial2.png" alt="Customer" class="w-12 h-12 rounded-full mb-4">
-            <p class="text-black">"The support from BSC is always on point and ensures smooth operations."</p>
-            <p class="text-black text-sm mt-2 font-semibold">- James P. | IT Director</p>
-           
-        </div>
-       
-        <div class="bg-white shadow-md rounded-md p-6">
-            <img src="Images/Testimonial3.png" alt="Customer" class="w-12 h-12 rounded-full mb-4">
-            <p class="text-black">"The team at BSC goes above and beyond to provide innovative solutions."</p>
-            <p class="text-black text-sm mt-2 font-semibold">- Jane D. | Project Manager</p>
-        </div>
+<section id="testimonials" class=" bg-white mt-10">
+    <h3 class="text-center  text-black font-semibold mb-8 mt-6 Montserrat" style="font-size: 30px;">Hear from Our Satisfied Customer</h3>
     
-        <div class="bg-white shadow-md rounded-md p-6">
-            <img src="Images/Testimonial1.png" alt="Customer" class="w-12 h-12 rounded-full mb-4">
-            <p class="text-black">"The BSC solutions fit perfectly with our business needs. Highly recommended!"</p>
-            <p class="text-black text-sm mt-2 font-semibold">- Linda T. | Entrepreneur</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mx-auto max-w-6xl">
+        <!-- Testimonial 1 -->
+        <div class="bg-white rounded-md p-6 relative border-l-4 border-red-700" style="box-shadow: 0 4px 8px rgba(247, 201, 201, 0.368);">
+            <div class="flex items-center">
+                <img src="Images/Testimonial1.png" alt="Customer" class="w-16 h-16 rounded-full mr-4">
+                <div>
+                    <p class="text-black text-sm mt-2 font-semibold" style="font-size:12px">~ Sarah M</p>
+                    <p class="text-black text-sm mt-0 font-regular" style="font-size:12px">Small Business Owner</p>
+                    <p class="text-black font-light mt-2" style="font-size: 10px">We've been using this BSC's internet services for over two years, and the connection has always been stable. Their customer support is responsive and helpful too!</p>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
 
+        <!-- Testimonial 2 -->
+        <div class="bg-white rounded-md p-6 relative border-l-4 border-red-700" style="box-shadow: 0 4px 8px rgba(247, 201, 201, 0.368);">
+            <div class="flex items-center">
+                <img src="Images/Testimonial1.png" alt="Customer" class="w-16 h-16 rounded-full mr-4">
+                <div>
+                    <p class="text-black text-sm mt-2 font-semibold Montserrat" style="font-size:12px">~ Sarah M</p>
+                    <p class="text-black text-sm mt-0 font-regular" style="font-size:12px">Small Business Owner</p>
+                    <p class="text-black font-light mt-2" style="font-size: 10px">We've been using this BSC's internet services for over two years, and the connection has always been stable. Their customer support is responsive and helpful too!</p>
+                </div>
+            </div>
+        </div>
 
-<!-- Footer Section -->
-<footer class="text-white py-8" style="background-color: #FFEEEE;">
-    <div class="container mx-auto flex justify-between items-center">
-       
-        <div class="w-1/3">
-            <img src="Images/bsclogo.png" alt="BSC Logo" class="w-28 mb-10">
-            <p class="text-black text-sm">Welcome to BSC. We’re excited to partner with you for your success.</p>
-            <a href="#" class="bg-red-500 text-white px-4 py-1 rounded-md font-semibold" style="font-size: 11px;">Tall Free 4141</a>
+        <!-- Testimonial 3 -->
+        <div class="bg-white rounded-md p-6 relative border-l-4 border-red-700" style="box-shadow: 0 4px 8px rgba(247, 201, 201, 0.368);">
+            <div class="flex items-center">
+                <img src="Images/Testimonial1.png" alt="Customer" class="w-16 h-16 rounded-full mr-4">
+                <div>
+                    <p class="text-black text-sm mt-2 font-semibold" style="font-size:12px">~ Sarah M</p>
+                    <p class="text-black text-sm mt-0 font-regular" style="font-size:12px">Small Business Owner</p>
+                    <p class="text-black font-light mt-2" style="font-size: 10px">We've been using this BSC's internet services for over two years, and the connection has always been stable. Their customer support is responsive and helpful too!</p>
+                </div>
+            </div>
         </div>
-        
-        <div class="w-1/3 text-center">
-            <p class="text-black text-sm">Kigali, Rwanda<br>Building 5 Avenue, Gasabo</p>
-            <p class="text-black text-sm">P.O Box 1234, Kigali, Rwanda</p>
-        </div>
-     
-        <div class="w-1/3 text-right">
-            <p class="text-black  text-sm">Opportunities | Secure Cloud</p>
-            <div class="mt-4 space-x-4">
-                <a href="#"><img src="Images/facebook_icon.png" alt="Facebook" class="w-6 inline-block"></a>
-                <a href="#"><img src="Images/twitter_icon.png" alt="Twitter" class="w-6 inline-block"></a>
-                <a href="#"><img src="Images/linkedin_icon.png" alt="LinkedIn" class="w-6 inline-block"></a>
-                <a href="#"><img src="Images/instagram_icon.png" alt="Instagram" class="w-6 inline-block"></a>
+
+        <!-- Testimonial 4 -->
+        <div class="bg-white rounded-md p-6 relative border-l-4 border-red-700" style="box-shadow: 0 4px 8px rgba(247, 201, 201, 0.368);;">
+            <div class="flex items-center">
+                <img src="Images/Testimonial1.png" alt="Customer" class="w-16 h-16 rounded-full mr-4">
+                <div>
+                    <p class="text-black text-sm mt-2 font-semibold" style="font-size:12px">~ Sarah M</p>
+                    <p class="text-black text-sm mt-0 font-regular" style="font-size:12px">Small Business Owner</p>
+                    <p class="text-black font-light mt-2" style="font-size: 10px">We've been using this BSC's internet services for over two years, and the connection has always been stable. Their customer support is responsive and helpful too!</p>
+                </div>
             </div>
         </div>
     </div>
-</footer>
+</section>
 
+
+
+
+
+<section id="footer">
+    <!-- Footer Section -->
+    <footer class="text-white py-8 mt-20" style="background-color: #FFEEEE;">
+        <div class="container mx-auto flex justify-between items-center">
+           
+            <div class="w-1/3">
+                <img src="Images/bsclogo.png" alt="BSC Logo" class="h-32.59 w-69.87">
+                <p class="text-black text-sm">Welcome to BSC. We’re excited to partner with you for your success.</p>
+                <a href="#" class="bg-red-500 text-white px-4 py-1 rounded-md font-semibold" style="font-size: 11px;">Toll Free 4141</a>
+            </div>
+            
+            <div class="w-1/3 text-center">
+                <p class="text-black text-sm">Kigali, Rwanda<br>Building 5 Avenue, Gasabo</p>
+                <p class="text-black text-sm">P.O Box 1234, Kigali, Rwanda</p>
+            </div>
+         
+            <div class="w-1/3 text-right">
+                <p class="text-black text-sm">Opportunities | Secure Cloud</p>
+                <div class="mt-4 space-x-4">
+                    <a href="#"><img src="Images/facebook_icon.png" alt="Facebook" class="w-6 inline-block"></a>
+                    <a href="#"><img src="Images/twitter_icon.png" alt="Twitter" class="w-6 inline-block"></a>
+                    <a href="#"><img src="Images/linkedin_icon.png" alt="LinkedIn" class="w-6 inline-block"></a>
+                    <a href="#"><img src="Images/instagram_icon.png" alt="Instagram" class="w-6 inline-block"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</section>
 
 
 

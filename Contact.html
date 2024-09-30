@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BSC Rwanda Hero Section</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- FontAwesome CDN -->
+</head>
+
+<body class="bg-white w-[1440px] h-[108.23px]">
+    <div class="mx-0">
+        <!-- Navbar -->
+        <header class="flex justify-between items-center p-6 bg-white sticky top-0 z-10"> <!-- Removed shadow-md class -->
+            <!-- Logo -->
+            <div class="text-red-500 text-2xl font-bold flex items-center ml-20">
+                <img src="Images/bsclogo.png" alt="BSC Logo" class="h-32.59 w-69.87"> <!-- Adjusted height for consistency -->
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="flex space-x-4 items-center font-regular text-black " style="font-size: 13px;">
+                <a href="index.html" class="text-gray-700 hover:text-red-500">Home</a>
+
+                <!-- Solutions Dropdown -->
+                <div class="relative group">
+                    <a href="#" class="text-black hover:text-red-500 relative flex items-center">
+                        Solutions
+                        <i class="fas fa-chevron-down ml-1"></i> <!-- Dropdown icon -->
+                    </a>
+                    <!-- Dropdown Menu -->
+                    <div class="absolute hidden bg-white border border-gray-200 rounded-md mt-1 group-hover:block">
+                        <a href="ConnectivitySolutions.html" class="block px-4 py-2 text-gray-700 hover:text-red-500 text-sm">Connectivity Solutions</a>
+                        <a href="ISP.html" class="block px-4 py-2 text-gray-700 hover:text-red-500 text-sm">ISP Products</a>
+                        <a href="BusinessSolutions.html" class="block px-4 py-2 text-gray-700 hover:text-red-500 text-sm">Business Solutions</a>
+                    </div>
+                </div>
+
+                <!-- Opportunities Dropdown -->
+                <div class="relative group">
+                    <a href="#" class="text-black hover:text-red-500 relative flex items-center">
+                        Opportunities
+                        <i class="fas fa-chevron-down ml-1"></i>
+                    </a>
+                    <div class="absolute hidden bg-white border border-gray-200 rounded-md mt-1 group-hover:block">
+                        <a href="CareerOpportunity.html" class="block px-4 py-2 text-gray-700 hover:text-red-500 text-sm">Career</a>
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:text-red-500 text-sm">Tenders</a>
+                    </div>
+                </div>
+
+                <a href="AboutUs.html" class="text-black hover:text-red-500">About Us</a>
+                <a href="NewsBlog.html" class="text-black hover:text-red-500">News/Blog</a>
+                <a href="SecureCloud.html" class="text-black hover:text-red-500">Secure Cloud</a>
+                <a href="FAQ.html" class="text-black hover:text-red-500">FAQ</a>
+            </nav>
+
+            <!-- Contact Us and Search Buttons -->
+            <div class="flex space-x-4 items-center mr-20">
+                <!-- Contact Us Button -->
+                <a href="Contact.html" class="bg-red-700 text-white px-6 py-1 rounded-md font-light text-xs flex items-center justify-center" style="box-shadow: 0 4px 8px rgba(237, 183, 183, 0.5);">
+                    <span class="font-bold text-white" style="font-size: 11px">Contact Us</span>
+                </a>
+
+                <!-- Search Button -->
+                <a href="#" class="flex items-center justify-center bg-white border border-red-600 text-black px-6 py-1 rounded-md font-light text-xs relative w-full lg:w-auto" style="box-shadow: 0 4px 8px rgba(237, 183, 183, 0.5);">
+                    <span class="font-light text-black" style="font-size: 11px">Search</span>
+                    <i class="text-black font-light fa-solid fa-magnifying-glass ml-4"></i> <!-- Icon after the text -->
+                </a>
+            </div>
+        </header>
+    </div>
+
+    <script>
+        // Show and hide dropdown on hover
+        const dropdown = document.querySelectorAll('.relative');
+
+        dropdown.forEach(menuItem => {
+            const menu = menuItem.querySelector('div');
+
+            menuItem.addEventListener('mouseenter', () => {
+                menu.classList.remove('hidden');
+            });
+
+            menuItem.addEventListener('mouseleave', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+
+</html>
+
+
+<!-- Hero Section -->
+<section class="relative bg-cover bg-center bg-no-repeat flex items-center justify-start text-left py-40 -mt-20" style="background-image: url('Images/Contact.jpeg');">
+    
+    <!-- Transparent Red Overlay -->
+    <div class="absolute inset-0 bg-red-700 opacity-30"></div> <!-- The overlay covers the whole section with 50% opacity -->
+
+    <div class="ml-6 w-1/2 relative z-10"> <!-- Added z-10 to ensure the content is on top of the overlay -->
+        <h1 class="ml-20 mt-8 text-white font-bold" style="font-size: 40px;">
+            Contact Us
+        </h1>    
+        <p class="ml-20 mt-2 text-white font-regular" style="font-size: 13px;">Maximize Your Efficiency And Productivity, Minimize Your Worries With BSC Secure Cloud!</p>
+    </div>
+
+    <div class="bg-white w-1/3 h-30 rounded-lg shadow-lg absolute -bottom-32 left-3/4 transform -translate-x-1/2 flex items-center justify-center relative z-10">
+        
+    </div> 
+</section>
+
+
+<!-- Contact Us Section -->
+<section class="flex justify-center items-center h-screen bg-white">
+    <div class="bg-white rounded-lg shadow-lg p-10 flex max-w-5xl mx-auto">
+        <!-- Left Side: Contact Form -->
+        <div class="w-2/3 pr-10">
+            <h2 class="text-3xl font-bold mb-4">Leave Us a Message</h2>
+            <p class="text-black text-semibold mb-8">Feel free to contact us any time. We will get back to you as soon as we can!</p>
+            <form action="#">
+                <div class="mb-4 text-black font-light">
+                    <input type="text" placeholder="Name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                </div>
+                <div class="mb-4 text-black font-light">
+                    <input type="email" placeholder="Email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                </div>
+                <div class="mb-6 text-black font-light">
+                    <textarea placeholder="Message" class=" text-bold w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400"></textarea>
+                </div>
+                <button type="submit" class="bg-red-800 text-white px-6 py-2 rounded-md shadow hover:bg-gray-800 transition">SEND</button>
+            </form>
+        </div>
+
+        <!-- Right Side: Contact Info -->
+        <div class="w-1/3 bg-red-800 text-white p-8 rounded-lg relative">
+            <div class="absolute top-0 left-0 bg-black-400 w-6 h-6"></div> <!-- Top left yellow square -->
+            <h3 class="text-lg font-semibold mb-4">Info</h3>
+            <div class="space-y-4">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:bsc@gmail.com" class="hover:text-yellow-400 list-disc list-inside font-light">bsc@gmail.com</a>
+                </div>
+                <div class="flex items-center space-x-2">
+
+                    
+                    
+                    <span><ul class="list-disc list-inside font-light mt-2" style="font-size: 12px">
+                        <li>Toll-Free: 4141</li>
+                        <li>WhatsApp: (+250) 785927485</li>
+                        <li>Technical Support: (+250)785927485</li>
+                        <li>Customer Support: (+250)785927485/0793898671 </li>
+                    </ul></span>
+                </div>
+                
+                 
+
+                <div class="flex items-center space-x-2 list-disc list-inside font-light">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Kisimenti Chez Lando</span>
+                </div>
+                <div class="flex items-center space-x-2 list-disc list-inside font-light">
+                   
+                    <span><ul class="list-disc list-inside font-light mt-2" style="font-size: 12px">
+                        <li>Monday - Friday: 09:00 AM - 06:00 PM</li>
+                        <li>Monday - Friday: 09:00 AM - 06:00 PM</li>
+                        <li>Technical Support: 24/7</li>
+                    </ul></span>
+                </div>
+            </div>
+            <div class="absolute bottom-0 right-0 bg-black-400 w-6 h-6"></div> <!-- Bottom right yellow square -->
+        </div>
+    </div>
+</section>
+
+<section id="footer">
+    <!-- Footer Section -->
+    <footer class="text-white py-8 mt-20" style="background-color: #FFEEEE;">
+        <div class="container mx-auto flex justify-between items-center">
+           
+            <div class="w-1/3">
+                <img src="Images/bsclogo.png" alt="BSC Logo" class="h-32.59 w-69.87">
+                <p class="text-black text-sm">Welcome to BSC. We’re excited to partner with you for your success.</p>
+                <a href="#" class="bg-red-500 text-white px-4 py-1 rounded-md font-semibold" style="font-size: 11px;">Toll Free 4141</a>
+            </div>
+            
+            <div class="w-1/3 text-center">
+                <p class="text-black text-sm">Kigali, Rwanda<br>Building 5 Avenue, Gasabo</p>
+                <p class="text-black text-sm">P.O Box 1234, Kigali, Rwanda</p>
+            </div>
+         
+            <div class="w-1/3 text-right">
+                <p class="text-black text-sm">Opportunities | Secure Cloud</p>
+                <div class="mt-4 space-x-4">
+                    <a href="#"><img src="Images/facebook_icon.png" alt="Facebook" class="w-6 inline-block"></a>
+                    <a href="#"><img src="Images/twitter_icon.png" alt="Twitter" class="w-6 inline-block"></a>
+                    <a href="#"><img src="Images/linkedin_icon.png" alt="LinkedIn" class="w-6 inline-block"></a>
+                    <a href="#"><img src="Images/instagram_icon.png" alt="Instagram" class="w-6 inline-block"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</section>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BSC Rwanda Hero Section</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- FontAwesome CDN -->
+</head>
+
+<body class="bg-white w-[1440px] h-[108.23px]">
+    <div class="mx-0">
+        <!-- Navbar -->
+        <header class="flex justify-between items-center p-6 bg-white sticky top-0 z-10"> <!-- Removed shadow-md class -->
+            <!-- Logo -->
+            <div class="text-red-500 text-2xl font-bold flex items-center ml-20">
+                <img src="Images/bsclogo.png" alt="BSC Logo" class="h-32.59 w-69.87"> <!-- Adjusted height for consistency -->
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="flex space-x-4 items-center font-regular text-black " style="font-size: 13px;">
+                <a href="index.html" class="text-gray-700 hover:text-red-500">Home</a>
+
+                <!-- Solutions Dropdown -->
+                <div class="relative group">
+                    <a href="#" class="text-black hover:text-red-500 relative flex items-center">
+                        Solutions
+                        <i class="fas fa-chevron-down ml-1"></i> <!-- Dropdown icon -->
+                    </a>
+                    <!-- Dropdown Menu -->
+                    <div class="absolute hidden bg-white border border-gray-200 rounded-md mt-1 group-hover:block">
+                        <a href="ConnectivitySolutions.html" class="block px-4 py-2 text-gray-700 hover:text-red-500 text-sm">Connectivity Solutions</a>
+                        <a href="ISP.html" class="block px-4 py-2 text-gray-700 hover:text-red-500 text-sm">ISP Products</a>
+                        <a href="BusinessSolutions.html" class="block px-4 py-2 text-gray-700 hover:text-red-500 text-sm">Business Solutions</a>
+                    </div>
+                </div>
+
+                <!-- Opportunities Dropdown -->
+                <div class="relative group">
+                    <a href="#" class="text-black hover:text-red-500 relative flex items-center">
+                        Opportunities
+                        <i class="fas fa-chevron-down ml-1"></i>
+                    </a>
+                    <div class="absolute hidden bg-white border border-gray-200 rounded-md mt-1 group-hover:block">
+                        <a href="CareerOpportunity.html" class="block px-4 py-2 text-gray-700 hover:text-red-500 text-sm">Career</a>
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:text-red-500 text-sm">Tenders</a>
+                    </div>
+                </div>
+
+                <a href="AboutUs.html" class="text-black hover:text-red-500">About Us</a>
+                <a href="NewsBlog.html" class="text-black hover:text-red-500">News/Blog</a>
+                <a href="SecureCloud.html" class="text-black hover:text-red-500">Secure Cloud</a>
+                <a href="FAQ.html" class="text-black hover:text-red-500">FAQ</a>
+            </nav>
+
+            <!-- Contact Us and Search Buttons -->
+            <div class="flex space-x-4 items-center mr-20">
+                <!-- Contact Us Button -->
+                <a href="Contact.html" class="bg-red-700 text-white px-6 py-1 rounded-md font-light text-xs flex items-center justify-center" style="box-shadow: 0 4px 8px rgba(237, 183, 183, 0.5);">
+                    <span class="font-bold text-white" style="font-size: 11px">Contact Us</span>
+                </a>
+
+                <!-- Search Button -->
+                <a href="#" class="flex items-center justify-center bg-white border border-red-600 text-black px-6 py-1 rounded-md font-light text-xs relative w-full lg:w-auto" style="box-shadow: 0 4px 8px rgba(237, 183, 183, 0.5);">
+                    <span class="font-light text-black" style="font-size: 11px">Search</span>
+                    <i class="text-black font-light fa-solid fa-magnifying-glass ml-4"></i> <!-- Icon after the text -->
+                </a>
+            </div>
+        </header>
+    </div>
+
+    <script>
+        // Show and hide dropdown on hover
+        const dropdown = document.querySelectorAll('.relative');
+
+        dropdown.forEach(menuItem => {
+            const menu = menuItem.querySelector('div');
+
+            menuItem.addEventListener('mouseenter', () => {
+                menu.classList.remove('hidden');
+            });
+
+            menuItem.addEventListener('mouseleave', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+
+</html>
+
+
