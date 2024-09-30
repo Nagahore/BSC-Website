@@ -9,20 +9,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- FontAwesome CDN -->
 </head>
 
-<body class="bg-white drop-shadow w-[1440px] h-[108.23px]">
+<body class="bg-white w-[1440px] h-[108.23px]">
     <div class="mx-0">
         <!-- Navbar -->
-        <header class="flex justify-between items-center p-6 bg-white shadow-md sticky top-0 z-10">
+        <header class="flex justify-between items-center p-6 bg-white sticky top-0 z-10"> <!-- Removed shadow-md class -->
             <!-- Logo -->
-            <div class="text-red-500 text-2xl font-bold flex items-center">
-                <img src="Images/bsclogo.png" alt="BSC Logo" class="h-10 w-auto"> <!-- Adjusted height for consistency -->
+            <div class="text-red-500 text-2xl font-bold flex items-center ml-20">
+                <img src="Images/bsclogo.png" alt="BSC Logo" class="h-32.59 w-69.87"> <!-- Adjusted height for consistency -->
             </div>
 
             <!-- Navigation Links -->
-            <!-- Navigation Links -->
-            <nav class="flex space-x-4 items-center font-semibold" style="font-size: 12px;">
+            <nav class="flex space-x-4 items-center font-regular text-black " style="font-size: 13px;">
                 <a href="index.html" class="text-gray-700 hover:text-red-500">Home</a>
-            
+
                 <!-- Solutions Dropdown -->
                 <div class="relative group">
                     <a href="#" class="text-black hover:text-red-500 relative flex items-center">
@@ -30,50 +29,68 @@
                         <i class="fas fa-chevron-down ml-1"></i> <!-- Dropdown icon -->
                     </a>
                     <!-- Dropdown Menu -->
-                    <div class="absolute hidden bg-white border border-gray-200 rounded-md shadow-lg mt-1 group-hover:block">
+                    <div class="absolute hidden bg-white border border-gray-200 rounded-md mt-1 group-hover:block">
                         <a href="ConnectivitySolutions.html" class="block px-4 py-2 text-gray-700 hover:text-red-500 text-sm">Connectivity Solutions</a>
                         <a href="ISP.html" class="block px-4 py-2 text-gray-700 hover:text-red-500 text-sm">ISP Products</a>
                         <a href="BusinessSolutions.html" class="block px-4 py-2 text-gray-700 hover:text-red-500 text-sm">Business Solutions</a>
                     </div>
                 </div>
-            
+
                 <!-- Opportunities Dropdown -->
                 <div class="relative group">
                     <a href="#" class="text-black hover:text-red-500 relative flex items-center">
                         Opportunities
                         <i class="fas fa-chevron-down ml-1"></i>
                     </a>
-                    <div class="absolute hidden bg-white border border-gray-200 rounded-md shadow-lg mt-1 group-hover:block">
+                    <div class="absolute hidden bg-white border border-gray-200 rounded-md mt-1 group-hover:block">
                         <a href="CareerOpportunity.html" class="block px-4 py-2 text-gray-700 hover:text-red-500 text-sm">Career</a>
                         <a href="#" class="block px-4 py-2 text-gray-700 hover:text-red-500 text-sm">Tenders</a>
                     </div>
                 </div>
-            
+
                 <a href="AboutUs.html" class="text-black hover:text-red-500">About Us</a>
                 <a href="NewsBlog.html" class="text-black hover:text-red-500">News/Blog</a>
                 <a href="SecureCloud.html" class="text-black hover:text-red-500">Secure Cloud</a>
-                <a href="#" class="text-black hover:text-red-500">FAQ</a>
+                <a href="FAQ.html" class="text-black hover:text-red-500">FAQ</a>
             </nav>
-            
 
-            <!-- Call to Action Button -->
-            <a href="#" class="bg-red-500 text-white px-4 py-2 rounded-md font-semibold text-xs">Get In Touch</a>
+            <!-- Contact Us and Search Buttons -->
+            <div class="flex space-x-4 items-center mr-20">
+                <!-- Contact Us Button -->
+                <a href="Contact.html" class="bg-red-700 text-white px-6 py-1 rounded-md font-light text-xs flex items-center justify-center" style="box-shadow: 0 4px 8px rgba(237, 183, 183, 0.5);">
+                    <span class="font-bold text-white" style="font-size: 11px">Contact Us</span>
+                </a>
+
+                <!-- Search Button -->
+                <a href="#" class="flex items-center justify-center bg-white border border-red-600 text-black px-6 py-1 rounded-md font-light text-xs relative w-full lg:w-auto" style="box-shadow: 0 4px 8px rgba(237, 183, 183, 0.5);">
+                    <span class="font-light text-black" style="font-size: 11px">Search</span>
+                    <i class="text-black font-light fa-solid fa-magnifying-glass ml-4"></i> <!-- Icon after the text -->
+                </a>
+            </div>
         </header>
     </div>
 
     <script>
         // Show and hide dropdown on hover
-        const dropdown = document.querySelector('.relative');
-        const menu = dropdown.querySelector('div');
+        const dropdown = document.querySelectorAll('.relative');
 
-        dropdown.addEventListener('mouseenter', () => {
-            menu.classList.remove('hidden');
-        });
+        dropdown.forEach(menuItem => {
+            const menu = menuItem.querySelector('div');
 
-        dropdown.addEventListener('mouseleave', () => {
-            menu.classList.add('hidden');
+            menuItem.addEventListener('mouseenter', () => {
+                menu.classList.remove('hidden');
+            });
+
+            menuItem.addEventListener('mouseleave', () => {
+                menu.classList.add('hidden');
+            });
         });
     </script>
+</body>
+
+</html>
+
+
 
 
 
@@ -81,13 +98,13 @@
         
          <!-- Hero Section -->
          <section class="bg-red-800 flex items-center justify-start text-left py-40 -mt-20 relative">
-            <div class="ml-6 w-1/2">
+            <div class="ml-20 w-1/2">
                 <h1 class="text-white font-bold" style="font-size: 40px;">
                     About Us
                 </h1>    
                 <p class="mt-4 text-white font-regular" style="font-size: 15px;">We are a tech company established in 2008, providing world-class broadband connectivity</p>
-                <p class="mt-0 text-white font-regular" style="font-size: 15px;">and solutions to empower citizens, communities, governments, and businesses in Rwanda and</p>
-                <p class="mt-0 text-white font-regular" style="font-size: 15px;">the region.</p>
+                <p class="mt-2 text-white font-regular" style="font-size: 15px;">and solutions to empower citizens, communities, governments, and businesses in Rwanda and</p>
+                <p class="mt-1 text-white font-regular" style="font-size: 15px;">the region.</p>
             </div>
         
             
@@ -101,15 +118,15 @@
     <img src="Images/hero2.png" alt="Aligned Image" class="ml-20 h-64 w-1/3 object-cover rounded-lg mt-20">
 
     <div class="ml-14"> 
-        <h2 class="mt-16 text-black font-bold text-xl">Our Mission</h2>
+        <h2 class="mt-16 text-black font-semibold text-xl">Our Mission</h2>
         <p class="mt-4 text-black font-regular text-xs" style="font-size: 15px;">To provide world-class broadband connectivity and solutions to</p>
-        <p class="mt-0 text-black font-regular text-xs" style="font-size: 15px;">empower citizens, communities, governments, and businesses in Rwanda and the region.</p>
-        <p class="mt-0 text-black font-regular text-xs" style="font-size: 15px;">Rwanda and the region.</p>
+        <p class="mt-2 text-black font-light text-xs" style="font-size: 15px;">empower citizens, communities, governments, and businesses in Rwanda and the region.</p>
+        <p class="mt-1 text-black font-light text-xs" style="font-size: 15px;">Rwanda and the region.</p>
         
-        <h2 class="mt-8 text-black font-bold text-xl">Our History</h2>
+        <h2 class="mt-8 text-black font-semibold text-xl">Our History</h2>
         <p class="mt-4 text-black font-regular text-xs" style="font-size: 15px;">To provide world-class broadband connectivity and solutions to</p>
-        <p class="mt-1 text-black font-regular text-xs" style="font-size: 15px;">empower citizens, communities, governments, and businesses in Rwanda and the region.</p>
-        <p class="mt-1 text-black font-regular text-xs" style="font-size: 15px;">Rwanda and the region.</p>
+        <p class="mt-2 text-black font-light text-xs" style="font-size: 15px;">empower citizens, communities, governments, and businesses in Rwanda and the region.</p>
+        <p class="mt-1 text-black font-light text-xs" style="font-size: 15px;">Rwanda and the region.</p>
     </div>
 </div>
 
@@ -117,10 +134,10 @@
 <!-- Our Values Section-->
 <div class="flex justify-end mr-40 mt-20">
     <div class="mr-20"> 
-        <h2 class=" mt-20 text-black font-bold text-xl">Our Values</h2> 
+        <h2 class=" mt-20 text-black font-semibold text-xl">Our Values</h2> 
         <p class="mt-4 text-black font-regular text-xs" style="font-size: 15px;">We prioritize impactful Innovation, creating cutting-edge,sustainable solutions</p>
-        <p class="mt-1 text-black font-regular text-xs" style="font-size: 15px;">that meet evolving tech needs.Our customer-centric approach keeps their needs at the </p> 
-        <p class="mt-1 text-black font-regular text-xs" style="font-size: 15px;">core of everything we do</p>
+        <p class="mt-2 text-black font-light text-xs" style="font-size: 15px;">that meet evolving tech needs.Our customer-centric approach keeps their needs at the </p> 
+        <p class="mt-1 text-black font-light text-xs" style="font-size: 15px;">core of everything we do</p>
     </div>
 
     <img src="Images/herro3.png" alt="Another Image" class="h-64 w-1/3 object-cover rounded-lg -mr-4">
